@@ -1,0 +1,24 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bootiful-k8s-service
+  labels:
+    app: bootiful-k8s-service
+#    app.kubernetes.io/managed-by: skaffold-v1.1.0
+#    skaffold.dev/builder: local
+#    skaffold.dev/cleanup: "true"
+#    skaffold.dev/deployer: kubectl
+#    skaffold.dev/docker-api-version: "1.40"
+#    skaffold.dev/run-id: c8fc23d2-85f5-453a-bc22-19f4a9ec88a6
+#    skaffold.dev/tag-policy: git-commit
+#    skaffold.dev/tail: "true"
+spec:
+  ports:
+    - port: 9090
+      protocol: TCP
+      targetPort: 9090
+  selector:
+    app: bootiful-k8s-app
+  type: NodePort
+

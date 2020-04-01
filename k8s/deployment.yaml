@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bootiful-k8s-app
+  labels:
+    app: bootiful-k8s-app
+    name: bootiful-k8s-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bootiful-k8s-app
+  template:
+    metadata:
+      labels:
+        app: bootiful-k8s-app
+    spec:
+      containers:
+        - image: docker.io/odrianoaliveira/bootiful-k8s-app
+          name: bootiful-k8s-app
