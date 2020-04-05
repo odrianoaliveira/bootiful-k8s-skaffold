@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-management-app
+  labels:
+    app: order-management-app
+    name: order-management-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-management-app
+  template:
+    metadata:
+      labels:
+        app: order-management-app
+    spec:
+      containers:
+        - image: docker.io/odrianoaliveira/order-management-app
+          name: order-management-app

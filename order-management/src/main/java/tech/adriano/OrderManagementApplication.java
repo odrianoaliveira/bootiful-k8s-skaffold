@@ -1,13 +1,13 @@
-package com.signavio.k8ssandbox;
+package tech.adriano;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class K8sSandboxApplication {
+public class OrderManagementApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(K8sSandboxApplication.class, args);
+		SpringApplication.run(OrderManagementApplication.class, args);
 	}
 
 }

@@ -1,15 +1,14 @@
 apiVersion: skaffold/v2beta1
 kind: Config
 metadata:
-  name: bootiful-k-s
+  name: order-management
 build:
   artifacts:
-    - image: docker.io/odrianoaliveira/bootiful-k8s-app
+    - image: docker.io/odrianoaliveira/order-management-app
       jib:
-        project: com.signavio:bootiful-k8s
+        project: tech.adriano:order-management
 deploy:
   kubectl:
     manifests:
       - k8s/deployment.yaml
       - k8s/service.yaml
-      - k8s/load-balancer.yaml

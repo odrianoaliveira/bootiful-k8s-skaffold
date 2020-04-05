@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-client-app
+  labels:
+    app: order-client-app
+    name: order-client-app
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-client-app
+  template:
+    metadata:
+      labels:
+        app: order-client-app
+    spec:
+      containers:
+        - image: docker.io/odrianoaliveira/order-client-app
+          name: order-client-app

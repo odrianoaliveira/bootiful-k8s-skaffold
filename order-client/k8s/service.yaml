@@ -7,10 +7,8 @@ metadata:
     app: bootiful-k8s-service
 spec:
   ports:
-    - port: 9090
-      protocol: TCP
+    - port: 80
       targetPort: 9090
   selector:
     app: bootiful-k8s-app
   type: NodePort
-

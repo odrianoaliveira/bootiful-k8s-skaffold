@@ -1,0 +1,5 @@
+
+eksctl create cluster --name=cluster-1 --nodes=2
+
+eksctl delete cluster cluster-1
+

@@ -1,0 +1,16 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: bootiful-k8s
+build:
+  artifacts:
+    - image: docker.io/odrianoaliveira/bootiful-k8s-app
+      jib:
+        project: tech.adriano:bootiful-k8s
+deploy:
+  kubectl:
+    manifests:
+      - order-management/k8s/deployment.yaml
+      - order-management/k8s/deployment.yaml
+      - order-client/k8s/service.yaml
+      - order-client/k8s/service.yaml
